@@ -2,6 +2,7 @@ package com.training.pom;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -14,12 +15,13 @@ public class LoginPOM {
 	}
 	
 	@FindBy(id="login")
+	//@CacheLookup----- holds element address in cache.
 	private WebElement userName; 
 	
 	@FindBy(id="password")
 	private WebElement password;
 	
-	@FindBy(id="formLogin_submitAuth")
+	@FindBy(id="form-login_submitAuth")
 	private WebElement loginBtn; 
 	
 	public void sendUserName(String userName) {
